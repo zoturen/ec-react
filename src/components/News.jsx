@@ -3,6 +3,16 @@ import {Link} from "react-router-dom";
 
 
 const News = () => {
+
+    const dots = (count) => {
+        let dotElements = []
+        for (let i = 0; i < count; ++i) {
+            dotElements.push(<div className="dot"></div>)
+        }
+
+        return dotElements
+    }
+
     return (
         <section className="news container">
             <h6>Article & News</h6>
@@ -12,11 +22,7 @@ const News = () => {
             </div>
             <ArticleContainer count={3} />
             <div className="dots">
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
+                {dots(5)}
             </div>
         </section>
     )
