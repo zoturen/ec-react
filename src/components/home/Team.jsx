@@ -6,8 +6,19 @@ import Cassandra from "../../assets/images/cassandra.png"
 import Amanda from "../../assets/images/amanda.png"
 import Jack from "../../assets/images/jack.png"
 import TeamMember from "./TeamMember.jsx";
+import TestimonialItem from "./TestimonialItem.jsx";
 
 const Team = () => {
+
+    const dots = (count) => {
+        let dotElements = []
+        for (let i = 0; i < count; ++i) {
+            dotElements.push(<div className="dot"></div>)
+        }
+
+        return dotElements
+    }
+
     return (
         <section className="team">
             <div className="container">
@@ -23,11 +34,7 @@ const Team = () => {
                     <TeamMember image={Justin} name="Justin Willoman" title="Senior Tech Consultant"/>
                 </div>
                 <div className="dots">
-                    <div className="dot"></div>
-                    <div className="dot"></div>
-                    <div className="dot"></div>
-                    <div className="dot"></div>
-                    <div className="dot"></div>
+                    {dots(5)}
                 </div>
             </div>
 
@@ -36,60 +43,14 @@ const Team = () => {
                     <h6>Testimonial</h6>
                     <h2>What Our Client Says</h2>
                     <div className="testimonial-items">
-                        <div className="testimonial-item">
-                            <div className="stars">
-                                <i className="fa-solid fa-star"></i>
-                                <i className="fa-solid fa-star"></i>
-                                <i className="fa-solid fa-star"></i>
-                                <i className="fa-solid fa-star"></i>
-                                <i className="fa-solid fa-star"></i>
-                            </div>
-                            <p className="rate-text">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos
-                                velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate"</p>
-                            <div className="who">
-                                <img src={Cassandra} alt="cassandra warred" />
-                                <div>
-                                    <h6>Cassandra Warren</h6>
-                                    <p>Business Manager, Dorfus</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="testimonial-item">
-                            <div className="stars">
-                                <i className="fa-solid fa-star"></i>
-                                <i className="fa-solid fa-star"></i>
-                                <i className="fa-solid fa-star"></i>
-                                <i className="fa-solid fa-star"></i>
-                                <i className="fa-solid fa-star"></i>
-                            </div>
-                            <p className="rate-text">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos
-                                velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate"</p>
-                            <div className="who">
-                                <img src={Amanda} alt="amanda" />
-                                <div>
-                                    <h6>Amanda Tulling</h6>
-                                    <p>Senior Developer, Square</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="testimonial-item">
-                            <div className="stars">
-                                <i className="fa-solid fa-star"></i>
-                                <i className="fa-solid fa-star"></i>
-                                <i className="fa-solid fa-star"></i>
-                                <i className="fa-solid fa-star"></i>
-                                <i className="fa-solid fa-star"></i>
-                            </div>
-                            <p className="rate-text">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos
-                                velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate"</p>
-                            <div className="who">
-                                <img src={Jack} alt="jack" />
-                                <div>
-                                    <h6>Jack McDogglas</h6>
-                                    <p>Key Account Manager, Gobona</p>
-                                </div>
-                            </div>
-                        </div>
+                        <TestimonialItem starCount={5} rateText="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos
+                                velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate" image={Cassandra} name="Cassandra Warren" title="Business Manager, Dorfus" />
+
+                        <TestimonialItem starCount={5} rateText="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos
+                                velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate" image={Amanda} name="Amanda Tulling" title="Senior Developer, Square" />
+
+                        <TestimonialItem starCount={5} rateText="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium libero, ad dignissimos
+                                velit qui, dolorum obcaecati cum saepe nesciunt nemo eligendi numquam voluptate" image={Jack} name="Jack McDogglas" title="Key Account Manager, Gobona" />
                     </div>
                     <a href="" className="button button-black">All Reviews <i className="fa-solid fa-arrow-right"></i></a>
                 </div>
