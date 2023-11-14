@@ -1,4 +1,5 @@
 import BackgroundLines from "../../assets/images/background-lines-right.svg"
+import ServiceItem from "./ServiceItem.jsx";
 
 const Services = () => {
     return (
@@ -8,38 +9,10 @@ const Services = () => {
                 <h6>Our Services</h6>
                 <h2>We Provide The Best <br/>Service For Consulting</h2>
                 <div className="service-section">
-                    <a className="service-item" href="#">
-                        <div className="line"></div>
-                        <h4>Business Advice</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus.</p>
-                        <div className="right">
-                            <span className="button button-black"><i className="fa-solid fa-arrow-right"></i></span>
-                        </div>
-                    </a>
-                    <a className="service-item" href="#">
-                        <div className="line"></div>
-                        <h4>Startup Business</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus.</p>
-                        <div className="right">
-                            <span className="button button-black"><i className="fa-solid fa-arrow-right"></i></span>
-                        </div>
-                    </a>
-                    <a className="service-item" href="#">
-                        <div className="line"></div>
-                        <h4>Financial Advice</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus.</p>
-                        <div className="right">
-                            <span className="button button-black"><i className="fa-solid fa-arrow-right"></i></span>
-                        </div>
-                    </a>
-                    <a className="service-item" href="#">
-                        <div className="line"></div>
-                        <h4>Risk Management</h4>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus.</p>
-                        <div className="right">
-                            <span className="button button-black"><i className="fa-solid fa-arrow-right"></i></span>
-                        </div>
-                    </a>
+                    <ServiceItem title="Business Advice" description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus." />
+                    <ServiceItem title="Startup Business" description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus." />
+                    <ServiceItem title="Financial Advice" description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus." />
+                    <ServiceItem title="Risk Management" description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis in nam possimus." />
                 </div>
                 <div id="browse-button">
                     <a className="button button-inverse" href="#">Browse Services <i className="fa-solid fa-arrow-right"></i></a>
