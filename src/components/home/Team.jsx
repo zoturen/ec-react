@@ -5,6 +5,7 @@ import Justin from "../../assets/images/justin.png"
 import Cassandra from "../../assets/images/cassandra.png"
 import Amanda from "../../assets/images/amanda.png"
 import Jack from "../../assets/images/jack.png"
+import TeamMember from "./TeamMember.jsx";
 
 const Team = () => {
     return (
@@ -16,26 +17,10 @@ const Team = () => {
                     <a href="" className="button button-primary">Browse Team <i className="fa-solid fa-arrow-right"></i></a>
                 </div>
                 <div className="team-members">
-                    <div className="team-member">
-                        <img src={Christina} alt="kristine palmer" />
-                        <h6>Kristine Palmer</h6>
-                        <p>Chef Operation Officer</p>
-                    </div>
-                    <div className="team-member">
-                        <img src={Itay} alt="mark aubri" />
-                        <h6>Mark Aubri</h6>
-                        <p>Senior Consultant</p>
-                    </div>
-                    <div className="team-member">
-                        <img src={Christina2} alt="kimberly hansen" />
-                        <h6>Kimberly Hansen</h6>
-                        <p>Senior Consultant</p>
-                    </div>
-                    <div className="team-member">
-                        <img src={Justin} alt="justin willoman" />
-                        <h6>Justin Willoman</h6>
-                        <p>Senior Tech Consultant</p>
-                    </div>
+                    <TeamMember image={Christina} name="Kristine Palmer" title="Chef Operation Officer"/>
+                    <TeamMember image={Itay} name="Mark Aubri" title="Senior Consultant"/>
+                    <TeamMember image={Christina2} name="Kimberly Hansen" title="Senior Consultant"/>
+                    <TeamMember image={Justin} name="Justin Willoman" title="Senior Tech Consultant"/>
                 </div>
                 <div className="dots">
                     <div className="dot"></div>
