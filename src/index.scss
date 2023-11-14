@@ -263,6 +263,17 @@ header {
         position: relative;
         display: inline-block;
 
+        .date {
+            position: absolute;
+            background: $bg-yellow;
+            height: 64px;
+            width: 56px;
+            top: 16px;
+            left: 16px;
+            padding: 5px 10px;
+            text-align: center;
+        }
+
         p {
             color: $color-gray;
             margin-top: 10px;

@@ -12,7 +12,7 @@ const ArticleContainer = ({count}) => {
     return (
         <div className="article-items">
             {data.slice(0, count).map(item => (
-                <ArticleItem key={item.id} id={item.id} image={item.imageUrl} tag={item.category} label={item.title} description={item.content} />
+                <ArticleItem key={item.id} id={item.id} image={item.imageUrl} tag={item.category} label={item.title} description={item.content} date={item.published} />
             ))} 
         </div>
     )
